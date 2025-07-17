@@ -33,7 +33,7 @@ This project is a deep learning-based image classifier that identifies different
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/flower-classifier.git
+git clone https://github.com/Yousif-Amir/flower-classifier.git
 cd flower-classifier
 ````
 
