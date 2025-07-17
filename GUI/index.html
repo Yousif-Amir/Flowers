@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🌸 Flower Classifier</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f9f6f2, #e0f7fa);
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #6a1b9a;
+      margin-bottom: 30px;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+    }
+
+    input[type="file"] {
+      padding: 10px;
+      border-radius: 8px;
+      margin: 15px 0;
+      font-size: 1rem;
+    }
+
+    input[type="submit"] {
+      background-color: #ba68c8;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #9c27b0;
+    }
+
+    img {
+      margin-top: 30px;
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .result {
+      font-size: 1.8rem;
+      margin-top: 20px;
+      color: #4caf50;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌼 Flower Image Classifier</h1>
+
+  <form method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*" required><br>
+    <input type="submit" value="Classify Flower">
+  </form>
+
+ 
+    <div>
+      <img src="{{ img_path }}" alt="Uploaded Flower">
+    </div>
+ 
+
+    <div class="result">🌸 Prediction: {{ prediction }}</div>
+ 
+</body>
+</html>
